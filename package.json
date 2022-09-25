@@ -4,6 +4,7 @@
   "description": "A Near tipping smart contract template, made by OTGU media.",
   "author": "Nathan Nicholson",
   "license": "ISC",
+  "bin": "./bin/cli.js",
   "scripts": {
     "start": "cd frontend && yarn start",
     "deploy": "cd contract && yarn deploy",
