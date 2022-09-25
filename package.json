@@ -1,0 +1,24 @@
+{
+  "name": "create-otgu-tip",
+  "version": "1.0.0",
+  "description": "A Near tipping smart contract template, made by OTGU media.",
+  "author": "Nathan Nicholson",
+  "license": "ISC",
+  "scripts": {
+    "start": "cd frontend && yarn start",
+    "deploy": "cd contract && yarn deploy",
+    "build": "yarn build:contract && yarn build:web",
+    "build:web": "cd frontend && yarn build",
+    "build:contract": "cd contract && yarn build",
+    "test": "yarn test:unit && yarn test:integration",
+    "test:unit": "cd contract && yarn test",
+    "test:integration": "cd integration-tests && yarn test -- -- \"./contract/build/contract.wasm\"",
+    "postinstall": "cd frontend && yarn && cd .. && cd integration-tests && yarn && cd .. && cd contract && yarn",
+    "prettier": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,md}\""
+  },
+  "devDependencies": {
+    "near-cli": "^3.3.0",
+    "prettier": "2.7.1"
+  },
+  "dependencies": {}
+}
